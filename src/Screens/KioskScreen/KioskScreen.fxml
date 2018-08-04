@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="606.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="/Screens/RegistrationScreen/dark brushed metal texture steel black stock photo scratch wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="enterButton" layoutX="147.0" layoutY="254.0" mnemonicParsing="false" onAction="#enter" prefHeight="78.0" prefWidth="117.0" style="-fx-background-color: #ae0101;" text="Enter">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="exitButton" layoutX="360.0" layoutY="254.0" mnemonicParsing="false" onAction="#exit" prefHeight="78.0" prefWidth="117.0" style="-fx-background-color: #ae0101;" text="Exit">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <TextField fx:id="carID" layoutX="148.0" layoutY="188.0" promptText="Enter car number" />
+      <Label layoutX="214.0" layoutY="31.0" text="Welcom to" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="32.0" />
+         </font></Label>
+      <Button fx:id="regButton" layoutX="514.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="Order Now" textFill="#ae0101">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="380.0" layoutY="371.0" prefHeight="17.0" prefWidth="135.0" text="Dont Have Reservation?" textFill="#ae0101" />
+      <Label layoutX="319.0" layoutY="41.0" prefHeight="42.0" prefWidth="69.0" text="CPS" textAlignment="CENTER" textFill="#ae0101">
+         <font>
+            <Font name="Eras Bold ITC" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerType" layoutX="227.0" layoutY="99.0" prefWidth="150.0" promptText="Customer Type" />
+      <TextField fx:id="orderOrMemberID" layoutX="148.0" layoutY="144.0" promptText="Enter Order/Member ID" />
+      <DatePicker fx:id="leaveDate" layoutX="328.0" layoutY="144.0" prefHeight="25.0" prefWidth="149.0" promptText="Est. leave date" />
+      <ComboBox fx:id="leaveHour" layoutX="328.0" layoutY="188.0" prefWidth="150.0" promptText="Est. leave hour" />
+      <Button fx:id="Back" layoutX="512.0" layoutY="-7.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="48.0" prefWidth="78.0" style="-fx-text-fill: #ae0101; -fx-background-color: transparent;" text="&lt;">
+         <font>
+            <Font name="Gisha Bold" size="40.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="109.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screens.AddCarScreen.AddCarScreenController">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="158.0" text="Fill in Car Id:" />
+      <TextField fx:id="carID" prefHeight="34.0" prefWidth="158.0" />
+      <Button fx:id="addCarButton" onAction="#onButtonClicked" mnemonicParsing="false" prefHeight="44.0" prefWidth="150.0" text="Add Car" />
+   </children>
+</VBox>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="420.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="420.0" fitWidth="714.0" pickOnBounds="true">
+         <image>
+            <Image url="/Screens/RegistrationScreen/dark brushed metal texture steel black stock photo scratch wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <TabPane prefHeight="420.0" prefWidth="714.0" style="-fx-background-color: transparent;">
+         <tabs>
+            <Tab closable="false" text="User">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="37.0" layoutY="236.0" prefHeight="155.0" prefWidth="180.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="InsertCarID" layoutX="268.0" layoutY="121.0" prefHeight="25.0" prefWidth="180.0" promptText="Car ID" />
+                              <Button fx:id="addNewCar" layoutX="268.0" layoutY="175.0" mnemonicParsing="false" onAction="#AddCar" prefHeight="37.0" prefWidth="180.0" style="-fx-background-color: #ae0101;" text="Add New Car" GridPane.rowIndex="1">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="328.0" layoutY="39.0" prefHeight="344.0" prefWidth="180.0">
+                           <children>
+                              <ComboBox fx:id="MembershipList" layoutX="49.0" layoutY="110.0" onAction="#ChooseMembership" prefHeight="25.0" prefWidth="181.0" promptText="Choose Membership" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="chooseStart" disable="true" layoutX="49.0" layoutY="196.0" prefHeight="25.0" prefWidth="202.0" promptText="Start Time:" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="parkLots" disable="true" layoutX="49.0" layoutY="153.0" prefHeight="25.0" prefWidth="200.0" promptText="Choose Park Lot" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="chooseEnd" disable="true" layoutX="41.0" layoutY="235.0" prefHeight="25.0" prefWidth="222.0" promptText="End Time:" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="SelectCar11" prefHeight="25.0" prefWidth="201.0" promptText="Select Car:" />
+                              <Button mnemonicParsing="false" onAction="#addMember" prefHeight="37.0" prefWidth="178.0" style="-fx-background-color: #ae0101;" text="Add Membership" GridPane.rowIndex="5">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <TextField fx:id="UserHello" layoutX="75.0" layoutY="30.0" prefHeight="38.0" prefWidth="208.0" style="-fx-background-color: transparent; -fx-text-fill: #ae0101; -fx-font-size: 17px;" styleClass="textFiled">
+                           <font>
+                              <Font name="Bell MT" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="631.0" layoutY="335.0" prefHeight="42.0" prefWidth="69.0" text="CPS" textAlignment="CENTER" textFill="#ae0101">
+                           <font>
+                              <Font name="Eras Bold ITC" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="32.0" prefHeight="33.0" prefWidth="61.0" style="-fx-text-fill: #ae0101;" text="Hello" textFill="#ae0101">
+                           <font>
+                              <Font name="Guttman Hatzvi" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="328.0" layoutY="7.0" prefHeight="27.0" prefWidth="226.0" text="Add Membership:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="182.0" prefHeight="27.0" prefWidth="226.0" text="Add new car:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Back" layoutX="631.0" layoutY="-17.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="33.0" prefWidth="70.0" style="-fx-text-fill: #ae0101; -fx-background-color: transparent;" text="&lt;">
+                           <font>
+                              <Font name="Gisha Bold" size="40.0" />
+                           </font>
+                        </Button>
+                        <Line endX="100.0" layoutX="130.0" layoutY="59.0" startX="-100.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#fffefe" />
+                                    <Stop color="#9a9a9a" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Line>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="Orders">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <GridPane layoutX="33.0" layoutY="22.0" prefHeight="366.0" prefWidth="196.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <DatePicker fx:id="SelectDate" layoutX="30.0" layoutY="112.0" prefHeight="25.0" prefWidth="197.0" promptText="Select Start Date" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="SelectCarPark" layoutX="29.0" layoutY="76.0" prefHeight="25.0" prefWidth="199.0" promptText="Select Car Park:" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="StartTime" layoutX="29.0" layoutY="153.0" prefHeight="25.0" prefWidth="199.0" promptText="Start Time:" GridPane.rowIndex="3" />
+                              <Button fx:id="placeOrderButton" layoutX="29.0" layoutY="273.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #ae0101;" text="Place Order" GridPane.rowIndex="6">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                              <ComboBox fx:id="CarsComboBox" layoutX="29.0" layoutY="38.0" prefHeight="25.0" prefWidth="194.0" promptText="Select a Car:">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+
+                        </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="SelectCar" layoutX="10.0" layoutY="79.0" prefHeight="25.0" prefWidth="201.0" promptText="Select Car:" />
+                              <ComboBox fx:id="EndTime" prefHeight="25.0" prefWidth="200.0" promptText="End Time:" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="SelectCar1" layoutX="10.0" layoutY="25.0" prefHeight="25.0" prefWidth="201.0" promptText="Select Car:" />
+                              <DatePicker fx:id="SelectDate1" prefHeight="25.0" prefWidth="197.0" promptText="Select End Date" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="table" layoutX="276.0" layoutY="31.0" prefHeight="303.0" prefWidth="426.0" style="-fx-background-color: transparent;">
+                           <columns>
+                              <TableColumn fx:id="OrderId" editable="false" prefWidth="60.0" text="Order ID" />
+                              <TableColumn fx:id="CarId" prefWidth="36.0" text="Car" />
+                              <TableColumn fx:id="CarParkId" prefWidth="73.0" text="Park" />
+                              <TableColumn fx:id="orderTimeFrom" prefWidth="126.0" text="From" />
+                              <TableColumn fx:id="orderTimeTo" prefWidth="137.0" text="To" />
+                           </columns>
+
+                        </TableView>
+                        <Button fx:id="CancelOrderButton" layoutX="489.0" layoutY="341.0" mnemonicParsing="false" onAction="#CancelOrder" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #ae0101;" text="Cancel Order">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Label layoutX="276.0" layoutY="1.0" prefHeight="27.0" prefWidth="226.0" text="Your Orders:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="1.0" prefHeight="27.0" prefWidth="226.0" text="Add Order:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="631.0" layoutY="335.0" prefHeight="42.0" prefWidth="69.0" text="CPS" textAlignment="CENTER" textFill="#ae0101">
+                           <font>
+                              <Font name="Eras Bold ITC" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="276.0" layoutY="343.0" prefHeight="27.0" prefWidth="226.0" text="Select Order and click to cancel:" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Memberships">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="regMemTable" layoutX="53.0" layoutY="49.0" prefHeight="138.0" prefWidth="586.0">
+                          <columns>
+                            <TableColumn fx:id="RegMemID" prefWidth="50.0" text="ID" />
+                            <TableColumn fx:id="RegMemCarID" prefWidth="105.0" text="Car Number" />
+                              <TableColumn fx:id="RegMemStartDate" prefWidth="159.0" text="Start Date" />
+                              <TableColumn fx:id="RegMemCarpark" prefWidth="94.0" text="Carpark" />
+                              <TableColumn fx:id="RegMemLeaveTime" minWidth="5.0" prefWidth="94.0" text="Leave Time" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="fullMemTable" layoutX="53.0" layoutY="230.0" prefHeight="134.0" prefWidth="586.0">
+                          <columns>
+                            <TableColumn fx:id="FullMemID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="FullMemCarID" prefWidth="75.0" text="Car Number" />
+                              <TableColumn fx:id="FullMemStartDate" prefWidth="141.0" text="Start Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="53.0" layoutY="14.0" text="Regular Memberships" textFill="RED" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="196.0" text="Full Memberships" textFill="RED" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="Complaints">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="631.0" layoutY="335.0" prefHeight="42.0" prefWidth="69.0" text="CPS" textAlignment="CENTER" textFill="#ae0101">
+                           <font>
+                              <Font name="Eras Bold ITC" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="29.0" prefHeight="27.0" prefWidth="226.0" text="Write a complaint:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="complaintText" layoutX="14.0" layoutY="61.0" prefHeight="156.0" prefWidth="682.0" style="-fx-text-fill: #ae0101;" />
+                        <Button fx:id="complaintSend" layoutX="591.0" layoutY="244.0" mnemonicParsing="false" onAction="#sendComplaint" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: #ae0101;" text="Send">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="0.6238095238095238" startY="0.9">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="carParkSelector" layoutX="177.0" layoutY="30.0" prefHeight="25.0" prefWidth="111.0" promptText="Carpark" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

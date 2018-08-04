@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../RegistrationScreen/dark%20brushed%20metal%20texture%20steel%20black%20stock%20photo%20scratch%20wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="ShowOccupancyBtn" layoutX="220.0" layoutY="122.0" mnemonicParsing="false" onAction="#ShowOccupancy" text="View" />
+      <ComboBox fx:id="ParkingLotsLst" layoutX="29.0" layoutY="122.0" prefWidth="150.0" promptText="Choose Parking Lot" />
+      <Label layoutX="29.0" layoutY="64.0" prefHeight="26.0" prefWidth="177.0" text="Parking Lot Occupancy" textFill="#ae0101">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="PreformanceReportBtn" layoutX="332.0" layoutY="188.0" mnemonicParsing="false" onAction="#CreatePreformanceReport" prefHeight="25.0" prefWidth="150.0" text="Get Preformance Report" />
+      <Button fx:id="ActivityReportBtn" layoutX="332.0" layoutY="122.0" mnemonicParsing="false" onAction="#CreateActivityReport" prefHeight="25.0" prefWidth="150.0" text="Get Activity Report" />
+      <Label layoutX="332.0" layoutY="64.0" prefHeight="26.0" prefWidth="177.0" text="Statistic Information" textFill="#ae0101">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="524.0" layoutY="351.0" prefHeight="42.0" prefWidth="69.0" text="CPS" textAlignment="CENTER" textFill="#ae0101">
+         <font>
+            <Font name="Eras Bold ITC" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
